@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Explora los últimos lanzamientos de juegos</h2>
+                <p>Encuentra reseñas, opiniones y calificaciones de los juegos más recientes.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-img-container d-flex align-items-center">
+                        <img src="{% static 'miapp/images/cod4.jpeg' %}" class="card-img-top img-fluid fixed-height-img" alt="Juego 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Juego 1</h5>
+                        <p class="card-text">Calificación: 4.5 / 5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-img-container d-flex align-items-center">
+                        <img src="{% static 'miapp/images/cod1.jpg' %}" class="card-img-top img-fluid fixed-height-img" alt="Juego 2">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Juego 2</h5>
+                        <p class="card-text">Calificación: 3.8 / 5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-img-container d-flex align-items-center">
+                        <img src="{% static 'miapp/images/lol.jpg' %}" class="card-img-top img-fluid fixed-height-img" alt="Juego 3">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Juego 3</h5>
+                        <p class="card-text">Calificación: 4.2 / 5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-img-container d-flex align-items-center">
+                            <img src="{% static 'miapp/images/csgo.png' %}" class="card-img-top img-fluid fixed-height-img" alt="Juego 4">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Juego 4</h5>
+                            <p class="card-text">Calificación: 4.0 / 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-img-container d-flex align-items-center">
+                            <img src="{% static 'miapp/images/re4.jpg' %}" class="card-img-top img-fluid fixed-height-img" alt="Juego 5">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Juego 5</h5>
+                            <p class="card-text">Calificación: 3.7 / 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-img-container d-flex align-items-center">
+                            <img src="{% static 'miapp/images/fifa23.jpg' %}" class="card-img-top img-fluid fixed-height-img" alt="Juego 6">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Juego 6</h5>
+                            <p class="card-text">Calificación: 4.8 / 5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+

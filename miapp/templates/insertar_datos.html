@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Insertar Review{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Insertar Review</div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="username">Tu Nombre de Usuario:</label>
+                            <input type="text" name="username" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="game">Juego:</label>
+                            <input type="text" name="game" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="review">Reseña:</label>
+                            <textarea name="review" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Calificación:</label>
+                            <div class="rating" id="rating">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5" title="Excelente">&#9733;</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4" title="Muy Bueno">&#9733;</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3" title="Bueno">&#9733;</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2" title="Regular">&#9733;</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1" title="Malo">&#9733;</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const rating = document.getElementById('rating');
+    const stars = rating.querySelectorAll('input[type="radio"]');
+
+    stars.forEach((star, index) => {
+        star.addEventListener('mouseenter', () => {
+            for (let i = 0; i <= index; i++) {
+                stars[i].nextElementSibling.style.color = 'gold';
+            }
+        });
+
+        star.addEventListener('mouseleave', () => {
+            if (clickedStar === null) {
+                stars.forEach(s => s.nextElementSibling.style.color = '');
+            }
+        });
+
+        let clickedStar = null;
+
+        star.addEventListener('click', () => {
+            clickedStar = index;
+            for (let i = 0; i <= index; i++) {
+                stars[i].checked = true;
+            }
+        });
+    });
+</script>
+{% endblock %}
